@@ -1,0 +1,55 @@
+{
+  "name": "@paaslowcode/components",
+  "version": "0.0.6",
+  "scripts": {
+    "plop": "plop",
+    "bootstrap": "pnpm i",
+    "dev": "pnpm run -C example dev:dev",
+    "build:template": "node ./bin/build-template.js",
+    "prepack": "npm run build:template",
+    "build": "pnpm run build --filter '@paasLowcode/*'"
+  },
+  "files": [
+    "example",
+    "plop-templates",
+    "packages"
+  ],
+  "workspaces": [
+    "packages/*",
+    "example/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.sycdev.com/syc-paas/front-end/lowcode-cli.git"
+  },
+  "dependencies": {
+    "@syc-lowcode/base": "1.1.59-beta-0.0.3",
+    "@syc-lowcode/client-framework": "1.1.59-beta-0.0.3",
+    "@syc-saas/ui": "1.9.69",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/compiler-sfc": "^3.2.47",
+    "change-case": "^4.1.2",
+    "cssnano": "^6.0.0",
+    "element-plus": "2.0.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "lodash": "4.17.21",
+    "plop": "^3.1.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "vite-plugin-style-inject": "^0.0.1",
+    "vue": "3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "^1.56.0",
+    "sass-loader": "^12.6.0",
+    "vite": "^4.2.0",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "gitHead": "6f2f60eae7e20c162378a028f58bd870ed558f94"
+}

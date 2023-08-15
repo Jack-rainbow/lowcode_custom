@@ -1,0 +1,25 @@
+{
+  "name": "@paas-lowcode/{{name}}",
+   "version": "{{version}}",
+  "files": [
+    "lib"
+  ],
+  "main": "./dist/{{name}}.cjs",
+  "module": "./dist/{{name}}.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/{{name}}.cjs",
+      "import": "./dist/{{name}}.mjs"
+    }
+  },
+  "private": true,
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ]
+}

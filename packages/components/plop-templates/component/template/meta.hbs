@@ -1,0 +1,45 @@
+import {
+  PageVariableDataType,
+  WidgetGroup,
+  WidgetIcon
+} from '@syc-lowcode/base'
+
+
+const {{inputs}}DefineMeta = {
+  // 组件名称
+  name: '{{inputs}}',
+  // 组件标识
+  code: '{{inputs}}',
+  // 组件分组
+  group: WidgetGroup.COMMON,
+  // 组件图标
+  icon: WidgetIcon.BUTTON,
+  // 组件属性
+  props: {
+    text: '{{inputs}}',
+    disabled: false,
+  },
+  variables: [
+    { name: '加载中', key: 'loading', dataType: PageVariableDataType.BOOLEAN, initialValue: false },
+    { name: '禁用', key: 'disabled', dataType: PageVariableDataType.BOOLEAN, initialValue: false }
+  ],
+
+  // 支持配置哪些事件
+  events: [
+    { label: '单击', name: 'onClick' },
+    { label: '鼠标移入', name: 'onMouseenter' },
+    { label: '鼠标移出', name: 'onMouseleave' }
+  ],
+  // 检查函数，检查自身实例数据的方法
+  inspect: (instanceData) => {},
+  setterForm: {
+    prop: [
+      'NameSetter',
+      'VisibleSetter',
+    ],
+    style: ['SizeStyleSetter', 'MarginStyleSetter', 'PaddingStyleSetter'],
+    event: ['EventSetter']
+  }
+}
+
+export default {{inputs}}DefineMeta

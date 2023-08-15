@@ -1,0 +1,18 @@
+import { defineComponent } from 'vue'
+import styles from './{{inputs}}.module.scss'
+
+const {{inputs}} = defineComponent({
+  name: 'Lc{{inputs}}',
+  props: {
+    size: { type: String },
+    text: { type: String }
+  },
+  emits: ['onClick', 'onMouseenter', 'onMouseleave'],
+  setup(props, { emit, attrs }) {
+    return () => {
+      return <div class={styles.container}>{props.text}</div>
+    }
+  }
+})
+
+export default {{inputs}}

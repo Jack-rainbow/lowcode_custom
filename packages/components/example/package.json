@@ -1,0 +1,23 @@
+{
+  "name": "@paas-lowcode/example",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:dev": "vite",
+    "build:prod": "vue-tsc --noEmit && vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  },
+  "dependencies": {
+    "@paas-lowcode/a": "workspace:^0.0.1",
+    "@paas-lowcode/b": "workspace:^0.0.1",
+    "@syc-lowcode/base": "1.1.59-beta-0.0.2",
+    "@syc-lowcode/client-framework": "1.1.59-beta-0.0.2",
+    "@syc-saas/ui": "1.9.69",
+    "element-plus": "2.0.2"
+  }
+}

@@ -1,0 +1,13 @@
+#! /usr/bin/env node
+
+const program = require('commander')
+const { getPkgVersion, printPkgVersion } = require('../dist/util')
+
+printPkgVersion()
+
+program
+  .version(getPkgVersion())
+  .usage('<command> [options]')
+  .command('init [projectName]', '用默认模版初始化自定义组件项目')
+  .command('update', '更新Cli版本')
+  .parse(process.argv)

@@ -1,0 +1,15 @@
+dist
+node_modules
+.cache
+.DS_Store
+lerna-debug.log
+yarn-error.log
+pnpm-error.log
+_book
+.idea
+.vscode
+temp
+website/build
+website/package.json
+env.sh
+.pnpm-debug.log
